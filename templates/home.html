@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>
+      Jovian Careers
+    </title>
+
+    <style>
+      h1{
+        font-size:40px;
+        font-family:sans-serif;
+        font-weight:normal;
+        color:rgb(100,100,100);
+        text-align:center;
+      }
+
+      #banner{
+        width: 100%;
+        height:360px;
+        object-fit:cover;  
+      }
+
+      h2{
+        font-family:sans-serif;
+        font-size: 32px;
+        color: rgb(100, 100, 100);
+        text-align: center;
+        font-weight:normal;
+      }
+
+      p{
+        font-family:sans-serif;
+        color:rgb(80,80,80);
+      }
+
+      button{
+        border: none;
+        border-radius:5px;
+        background-color:rgb(150,150,150);
+        color:white;
+        padding:20px 30px;
+        font-size:20px;
+      }
+
+      #container{
+        max-width: 720px;
+        margin: 0px auto 0px auto;
+      }
+
+      .apply{
+        border: none;
+        border-radius:5px;
+        background-color:rgb(150,150,150);
+        color:white;
+        padding:10px 20px;
+        font-size:15px;
+      }
+    </style>
+    
+  </head>
+
+  <body>
+    
+    <div id="container">
+    <h1>Jovian Careers</h1>
+    <img id="banner" src="https://learn-flask-1--aisrangdb5221k.repl.co/static/logo.jpg">
+      
+  <h2>About Jovian</h2>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+  <h2>Open Positions</h2>
+      
+  <div>
+    {%for job in jobs%}  <!--We can use for loop inside templates using special syntaxes.
+                             "jobs" is a list, so we can access each list items using loop.
+                             "job" will access all the items one by one is the list.
+                             -->
+
+    {%include 'jobitem.html'%}  <!--What "include" does here is, inside the for loop each time
+                                  with the different value of "job", include the template jobitem.html"
+                                  and pass the variables that are available in that template to this
+                                  template-->
+    
+  {%endfor%}              <!--This indicates the end of for loop-->
+  </div>
+
+  <div style="text-align:center;">
+  <button>Contact Us</button>
+  </div>
+
+    </div>
+
+  </body>
+  
+</html>

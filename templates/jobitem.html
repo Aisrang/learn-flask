@@ -1,0 +1,25 @@
+<div style="margin-bottom:16px;border-bottom:1px solid grey;padding-bottom:8px;">
+
+  <h4 style="color:rgb(120,120,120); font-family:sans-serif;margin-bottom:4px;">
+    {{job['title']}}
+  </h4>                     <!--This is how we access and fetch value from the list.
+                          Here, we access the keys of the list to fetch its value.
+                           "job" is the item and ['title'] is the key of the item.-->
+
+  <div style="color:rgb(120,120,120); font-family:sans-serif;margin-bottom:4px;">
+    <b>Location:</b> {{job['location']}}
+  </div>
+
+  {%if 'salary' in job%}  <!--We can also use if statements.
+                               Here, if salary item exists in the list, only then the code
+                               within its block will execute.-->
+
+  <div style="color:rgb(120,120,120); font-family:sans-serif;margin-bottom:16px;">
+    <b>Salary: </b>{{job['salary']}}
+  </div>
+
+  {%endif%}           <!--This indicates the end of if statement-->
+
+  <button class="apply">Apply</button>
+  
+</div>
