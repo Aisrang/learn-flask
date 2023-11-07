@@ -1,12 +1,12 @@
-<div style="margin-bottom:16px;border-bottom:1px solid grey;padding-bottom:8px;">
+<div style="border-bottom:1px solid grey;padding-bottom:16px;">
 
-  <h4 style="color:rgb(120,120,120); font-family:sans-serif;margin-bottom:4px;">
+  <h4 style="color:rgb(120,120,120); font-family:sans-serif;padding-bottom:4px;">
     {{job['title']}}
   </h4>                     <!--This is how we access and fetch value from the list.
                           Here, we access the keys of the list to fetch its value.
                            "job" is the item and ['title'] is the key of the item.-->
 
-  <div style="color:rgb(120,120,120); font-family:sans-serif;margin-bottom:4px;">
+  <div style="color:rgb(120,120,120); font-family:sans-serif;padding-bottom:4px;">
     <b>Location:</b> {{job['location']}}
   </div>
 
@@ -14,12 +14,16 @@
                                Here, if salary item exists in the list, only then the code
                                within its block will execute.-->
 
-  <div style="color:rgb(120,120,120); font-family:sans-serif;margin-bottom:16px;">
+  <div style="color:rgb(120,120,120); font-family:sans-serif;padding-bottom:4px;">
     <b>Salary: </b>{{job['salary']}}
   </div>
 
   {%endif%}           <!--This indicates the end of if statement-->
 
-  <button class="apply">Apply</button>
+  <!-- <button class="apply">Apply</button> -->
+  <div style="margin-top:20px;">
+    <a class="apply" href="mailto:aisrangdb5221k@gmail.com?subject=Application%20for%20{{job['title']}}&body=My%20Name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20Resume%20Link%3A%20%3Cresume%20link%3E%0D%0AMy%20LinkedIn%20Link%3A%20%3Clinkedin%20link%3E">
+    Apply </a>
+  </div>
   
 </div>
